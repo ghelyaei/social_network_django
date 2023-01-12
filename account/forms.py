@@ -7,7 +7,7 @@ class UserRegistrationForm(forms.Form):
     username = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
     email = forms.CharField(widget=forms.EmailInput(attrs={'class':'form-control'}))
     password1 = forms.CharField(label='password', widget=forms.PasswordInput(attrs={'class':'form-control'}))
-    password2 = forms.CharField(label='confirm password', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+    password2 = forms.CharField(label='confirm password', widget=forms.PasswordInput(attrs={'class':'form-control'}))
 
     def clean_email(self):
         email = self.cleaned_data['email']
